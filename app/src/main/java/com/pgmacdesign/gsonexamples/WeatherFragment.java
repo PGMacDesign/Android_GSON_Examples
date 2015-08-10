@@ -122,9 +122,11 @@ public class WeatherFragment extends Fragment{
 
 				//Parse the JSON with GSON
 				try{
+					//GSON object to be used in the parsing process
 					GsonBuilder gsonBuilder = new GsonBuilder();
 					Gson gson = gsonBuilder.create();
 
+					//Put the data into the weather object using GSON to parse
 					weatherData = gson.fromJson(reply, WeatherData.class); //This should work...
 
 					Log.d(LOG, weatherData.main.temp);
